@@ -27,19 +27,27 @@ void drawPlayer(int id, int y, int dirY)
   
   if(id == 1)
   {
-    lc.setLed(0 , 0, y, false);
-    lc.setLed(0 , 0, y+1, false);
+    lc.setLed(0 , p1X, y, false);
+    lc.setLed(0 , p1X, y+1, false);
     if((dirY == 1 && y < 6) || (dirY == -1 && y > 0))
     {
-      lc.setLed(0, 0, y+dirY, true);
-      lc.setLed(0, 0, y+dirY+1, true);
+      lc.setLed(0, p1X, y+dirY, true);
+      lc.setLed(0, p1X, y+dirY+1, true);
     }
   }
   else if(id == 2)
   {
-    
+    lc.setLed(0 , p2X, y, false);
+    lc.setLed(0 , p2X, y+1, false);
+    if((dirY == 1 && y < 6) || (dirY == -1 && y > 0))
+    {
+      lc.setLed(0, p2X, y+dirY, true);
+      lc.setLed(0, p2X, y+dirY+1, true);
+    }
   }
 }
+
+
 
 void setup() 
 {
